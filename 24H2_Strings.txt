@@ -529,8 +529,8 @@ YieldPercentage - def 10​​​​​​​
 
 Other Strings LSA:
 MACHINE\System\CurrentControlSet\Control\Lsa
-RestrictAnonymousSAM - def 0
-RestrictAnonymous - def 1
+RestrictAnonymousSAM - def 1
+RestrictAnonymous - def 0
 NoLMHash - def 0
 LimitBlankPasswordUse - def 1
 DisableDomainCreds - def 0
@@ -550,6 +550,7 @@ EnableVirtualization - def 1
 Windows Defender:
 SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\AppHost
 EnableWebContentEvaluation - def 1
+PreventOverride - def 1
 
 Windows main:
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows
@@ -561,7 +562,7 @@ DesktopHeapLogging - def 1
 
 Mouse Tweaks:
 HKEY_CURRENT_USER\Control Panel\Mouse
-RawMouseThrottleDuration — def 8
+RawMouseThrottleDuration — min 0x3, max: 0x14
 RawMouseThrottleEnabled — def 1
 RawMouseThrottleForced — def 0
 RawMouseThrottleLeeway — def 2
