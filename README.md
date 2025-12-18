@@ -8,6 +8,4 @@
 # Information
 strings - a data type whose values ​​are an arbitrary sequence (string) of the symbols of the alphabet. Each variable of this type (string variable) can be represented by a fixed amount of bytes or have arbitrary length.
 
-# Keywords for Google indexing (ignore this)
-
-tweak tweaks w11 strings 24H2 24H2 Strings
+author: iiiexoiii_undead, q777k
