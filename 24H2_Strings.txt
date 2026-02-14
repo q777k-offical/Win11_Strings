@@ -185,16 +185,8 @@ Win32CalloutWatchdogBugcheckEnabled - def 0
 SkipTickOverride - def 1
 
 HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\I/O System:
-LargeIrpStackLocations - def 13
-MediumIrpStackLocations - def 2
-IoBlockLegacyFsFilters - def 0
-IoCaseInsensitive - def 1
 RequireDeviceAccessCheck - def 1
-IoFailZeroAccessCreate - def 1
-IoEnableSessionZeroAccessCheck - def 0
 IoAllowLoadCrashDumpDriver - def 0
-IoIrpCompletionTimeoutInSeconds - def 12c
-IoKeepAliveTimeMs - def 1388
 DisableDiskCounters - def 0
 
 HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Executive:
@@ -356,12 +348,6 @@ SkipHibernateMemoryMapValidation - def ffffffff
 PoFxSystemIrpWaitForReportDevicePowered - def 0
 DisableDisplayBurstOnPowerSourceChange - def 0
 DisableInboxPepGeneratedConstraints - def ffffffff
-
-*PowerWatchdogRequestQueueTimeoutMsec
-*PowerWatchdogPoCalloutTimeoutMsec
-*PowerWatchdogPowerOnGdiTimeoutMsec
-*PowerWatchdogDwmSyncFlushTimeoutMsec
-*PowerWatchdogDrvSetMonitorTimeoutMsec
 
 HKLM\SYSTEM\CurrentControlSet\Control\Power\ModernSleep:
 EnabledActions - def 0
@@ -532,25 +518,22 @@ MACHINE\System\CurrentControlSet\Control\Lsa
 RestrictAnonymousSAM - def 1
 RestrictAnonymous - def 0
 NoLMHash - def 0
-LimitBlankPasswordUse - def 1
-DisableDomainCreds - def 0
 
 Policies System:
 MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System
-LegalNoticeText
-LegalNoticeCaption
-DontDisplayLastUserName - def 0
-DontDisplayUserName - def 0
+LegalNoticeText - null
+LegalNoticeCaption - null
 ConsentPromptBehavior - def 1
-DisableCAD - def 0
-EnableInstallerDetection - def 1
 EnableLUA - def 1
-EnableVirtualization - def 1
 
 Windows Defender:
 SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\AppHost
 EnableWebContentEvaluation - def 1
 PreventOverride - def 1
+
+//alternative key:
+SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost\EnableWebContentEvaluation
+Enabled - def 1
 
 Windows main:
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows
@@ -562,10 +545,10 @@ DesktopHeapLogging - def 1
 
 Mouse Tweaks:
 HKEY_CURRENT_USER\Control Panel\Mouse
-RawMouseThrottleDuration — min 0x3, max: 0x14
+RawMouseThrottleDuration — min 0x8, max: 0x14
 RawMouseThrottleEnabled — def 1
 RawMouseThrottleForced — def 0
-RawMouseThrottleLeeway — def 2
+RawMouseThrottleLeeway — def 5
 
 ======================================
 
